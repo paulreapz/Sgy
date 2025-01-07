@@ -1,14 +1,16 @@
 name: Node.js Setup and Deployment
 
 on:
+  push:
+    branches:
+      - main
+      
   workflow_dispatch:
     inputs:
       your-input-name:
         description: 'Your input description'
         required: true
-  push:
-    branches:
-      - main
+
 
 jobs:
   deploy:
